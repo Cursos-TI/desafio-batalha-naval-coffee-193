@@ -32,6 +32,40 @@ int main() {
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
     // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
 
+    int matriz2 [10][10];
+    int contador = 0;
+
+
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            matriz2[i][j] = 0;
+            printf("%d ", matriz2 [i][j]);
+        }
+                printf("\n");
+    }
+    
+
+
+    printf("\n\n");
+
+    //Posicionando os navios
+
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            if (i == j)
+            {
+                matriz2 [i][j] = 3;
+            } 
+            printf("%d ", matriz2 [i][j]);
+        }
+        printf("\n");
+    }
+    
+
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
     // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
