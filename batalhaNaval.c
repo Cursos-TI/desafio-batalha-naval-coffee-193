@@ -36,12 +36,21 @@ int main() {
     int contador = 0;
 
 
+    //Posicionando os navios (horizontal)
+
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
         {
             matriz2[i][j] = 0;
             printf("%d ", matriz2 [i][j]);
+            contador++;
+
+            if (contador < 5){
+                matriz2 [i][j] = 3;
+            } else if (contador > 97){
+                matriz2 [i][j] = 3;
+            }
         }
                 printf("\n");
     }
@@ -50,16 +59,18 @@ int main() {
 
     printf("\n\n");
 
-    //Posicionando os navios
+    //Posicionando os navios (diagonal)
 
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
         {
-            if (i == j)
+            if (i == j & i < 3)
             {
                 matriz2 [i][j] = 3;
-            } 
+            } else if (i == j + 2 & i < 5) {
+                matriz2 [i][j] = 3;
+            }
             printf("%d ", matriz2 [i][j]);
         }
         printf("\n");
